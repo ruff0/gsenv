@@ -1,2 +1,2 @@
-#!/bin/sh
-ls "/Applications/MAMP/bin/php/"
+#!/bin/bash
+ls -v /usr/local/php-*

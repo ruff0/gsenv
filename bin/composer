@@ -15,7 +15,7 @@ function upsearch () {
 }
 
 
-default="5.5.10"
+default="latest"
 
 value=$(upsearch ".phpversion")
 if [[ -z "$value" ]]; then 
@@ -23,7 +23,7 @@ if [[ -z "$value" ]]; then
 else 
   version=`cat $value`
 fi
-php="/Applications/MAMP/bin/php/php$version/bin/php"
+php="/usr/local/php-$version/bin/php"
 if [ -e "$php" ]; then
   $php "$SCRIPTPATH/composer.phar" $*
 else
